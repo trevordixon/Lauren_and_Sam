@@ -1,0 +1,801 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+
+
+/* =============================================================================
+	 HTML5 display definitions
+	 ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+
+/* =============================================================================
+	 Base
+	 ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+body { margin: 0; font-size: 1em; line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+::-moz-selection { background: #B52892; color: #fff; text-shadow: none; }
+::selection { background: #B52892; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+	 Links
+	 ========================================================================== */
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+	 Typography
+	 ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+	 Lists
+	 ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+	 Embedded content
+	 ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+	 Figures
+	 ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+	 Forms
+	 ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+
+button, input { line-height: normal; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled], input[disabled] { cursor: default; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+	 Tables
+	 ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* =============================================================================
+	 Chrome Frame Prompt
+	 ========================================================================== */
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+
+/* ==|== primary styles =====================================================
+	 Author:
+	 ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==|== media queries ======================================================
+	 EXAMPLE Media Query for Responsive Design.
+	 This example overrides the primary ('mobile first') styles
+	 Modify as content requires.
+	 ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+	/* Style adjustments for viewports that meet the condition */
+}
+
+
+
+/* ==|== non-semantic helper classes ========================================
+	 Please define your styles before this section.
+	 ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+// Mixins
+
+.text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+	text-shadow: @string;
+}
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.inner-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.box-sizing (@type: border-box) {
+	-webkit-box-sizing: @type;
+	-moz-box-sizing:    @type;
+	box-sizing:         @type;
+}
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+	-webkit-border-top-right-radius:    @topright;
+	-webkit-border-bottom-right-radius: @bottomright;
+	-webkit-border-bottom-left-radius:  @bottomleft;
+	-webkit-border-top-left-radius:     @topleft;
+
+	-moz-border-radius-topright:        @topright;
+	-moz-border-radius-bottomright:     @bottomright;
+	-moz-border-radius-bottomleft:      @bottomleft;
+	-moz-border-radius-topleft:         @topleft;
+
+	border-top-right-radius:            @topright;
+	border-bottom-right-radius:         @bottomright;
+	border-bottom-left-radius:          @bottomleft;
+	border-top-left-radius:             @topleft;
+
+	-moz-background-clip:    padding; 
+	-webkit-background-clip: padding-box; 
+	background-clip:         padding-box; 
+}
+
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		@opacity;
+}
+
+.gradient (@startColor: #eee, @endColor: white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+ 	background-color: @startColor;
+	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+	background-image: -moz-linear-gradient(left, @startColor, @endColor);
+	background-image: -ms-linear-gradient(left, @startColor, @endColor);
+	background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+	-webkit-animation: @name @duration @delay @ease;
+	-moz-animation:    @name @duration @delay @ease;
+	-ms-animation:     @name @duration @delay @ease;
+}
+
+.transition (@transition) {
+	-webkit-transition: @transition;  
+	-moz-transition:    @transition;
+	-ms-transition:     @transition; 
+	-o-transition:      @transition;  
+}
+.transform(@string){
+	-webkit-transform: @string;
+	-moz-transform: 	 @string;
+	-ms-transform: 		 @string;
+	-o-transform: 		 @string;
+}
+.scale (@factor) {
+	-webkit-transform: scale(@factor);
+	-moz-transform: 	 scale(@factor);
+	-ms-transform: 		 scale(@factor);
+	-o-transform: 		 scale(@factor);
+}
+.rotate (@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: 	 rotate(@deg);
+	-ms-transform: 		 rotate(@deg);
+	-o-transform: 		 rotate(@deg);
+}
+.skew (@deg, @deg2) {
+	-webkit-transform:       skew(@deg, @deg2);
+	-moz-transform: 	 skew(@deg, @deg2);
+	-ms-transform: 		 skew(@deg, @deg2);
+	-o-transform: 		 skew(@deg, @deg2);
+}
+.translate (@x, @y:0) {
+	-webkit-transform:       translate(@x, @y);
+	-moz-transform: 	 translate(@x, @y);
+	-ms-transform: 		 translate(@x, @y);
+	-o-transform: 		 translate(@x, @y);
+}
+.translate3d (@x, @y: 0, @z: 0) {
+	-webkit-transform:       translate3d(@x, @y, @z);
+	-moz-transform: 	 translate3d(@x, @y, @z);
+	-ms-transform: 		 translate3d(@x, @y, @z);
+	-o-transform: 		 translate3d(@x, @y, @z);
+}
+.perspective (@value: 1000) {
+	-webkit-perspective: 	@value;
+	-moz-perspective: 	@value;
+	-ms-perspective: 	@value;
+	perspective: 		@value;
+}
+.transform-origin (@x:center, @y:center) {
+	-webkit-transform-origin: @x @y;
+	-moz-transform-origin:    @x @y;
+	-ms-transform-origin:     @x @y;
+	-o-transform-origin:      @x @y;
+}
+.transform-preserve3d {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+
+}
+.backface-visibility(@v: visible) {
+	-webkit-backface-visibility: @v;
+	-moz-backface-visibility: @v;
+	-o-backface-visibility: @v;
+	-ms-backface-visibility: @v;
+}
+
+
+
+
+/* ==|== print styles =======================================================
+	 Print styles.
+	 Inlined to avoid required HTTP connection: h5bp.com/r
+	 ========================================================================== */
+
+@media print {
+	* { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+	a, a:visited { text-decoration: underline; }
+	a[href]:after { content: " (" attr(href) ")"; }
+	abbr[title]:after { content: " (" attr(title) ")"; }
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+	pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+	thead { display: table-header-group; } /* h5bp.com/t */
+	tr, img { page-break-inside: avoid; }
+	img { max-width: 100% !important; }
+	@page { margin: 0.5cm; }
+	p, h2, h3 { orphans: 3; widows: 3; }
+	h2, h3 { page-break-after: avoid; }
+}
+
+
+
+
+body {
+	background-color: #000;
+}
+
+
+.text {
+	color: #fff;
+	position: absolute;
+	z-index: 10;
+	.text-shadow(2px 2px 30px #000);
+}
+
+.navbar-box {
+	position: absolute;
+	z-index: 10;
+	background-color: #000;
+	opacity: 0.7;
+	bottom: 0;
+	height: 0.5em;
+	width: 100%;
+}
+
+.navbar {
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	text-align: center;
+	font-size: 0.3em;
+	margin: 0;
+	padding: 0;
+	color: #FFF;
+	font-family: "Pontano Sans", sans-serif;
+
+	li {
+		display: inline-block;
+
+		a {
+			color: #FFF;
+			text-decoration: none;
+			display: inline-block;
+			padding: 0.15em 0.6em;
+		}
+
+		&.active a, a:hover {
+			background-color: #000;
+		}
+	}
+}
+
+.page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	.container {
+		position: relative;
+	}
+
+	.background-image {
+		position: absolute;
+		top: 0;
+		left: 0	;
+		max-width: 100%;
+		max-height: 100%;
+		z-index: 0;
+	}
+
+	h1 {
+		.text;
+		font-family: Lustria, serif;
+		font-weight: normal;
+		top: 1em;
+		left: .6em;
+		font-size: 1.1em;
+		margin: 0;
+	}
+
+
+}
+
+
+
+.Home-page {
+
+	.are-to-be-sealed {
+		.text;
+		font-family: "Pontano Sans", sans-serif;
+		top: 6.9em;
+		left: 8.2em;
+		position: absolute;
+		font-size: .35em;
+		z-index: 10;
+
+		strong {
+			font-size: 1.3em;
+		}
+	}
+
+	h2 {
+		.text;
+		font-family: Lustria, serif;
+		font-weight: normal;
+		font-size: .6em;
+		margin: 0;
+		top: 5.2em;
+		left: 3.6em;
+	}
+
+	.menu-box {
+		background-color: #A65A0E;
+		opacity: (0.7);
+		position: absolute;
+		top: 5.5em;
+		left: 0;
+		width: 5em;
+		height: 5.5em;
+		z-index: 9;
+	}
+
+	.menu {
+		position: absolute;
+		font-family: "Pontano Sans", sans-serif;
+		z-index: 10;
+		font-size: .6em;
+		margin: 0;
+		top: 9.7em;
+		left: 0.8em;
+		color: #FFF;
+		line-height: 2em;
+
+		a {
+			color: #FFF;
+			text-decoration: none;
+
+			&:hover {
+				border-bottom: 0.05em dashed #FFF;
+			}
+		}
+	}
+}
+
+
+.Venues-page {
+	h1 {
+		left: 2.1em;
+		top: 0.5em;
+		font-size: 1.5em;
+	}
+
+	.addresses-box {
+		.opacity(0.7);
+		z-index: 9;
+		background-color: #FE2A3D;
+		position: absolute;
+		top: 2.7em;
+		left: 3em;
+		width: 5.6em;
+		height: 6.8em;
+	}
+
+	.addresses {
+		color: #FFF;
+		position: absolute;
+		font-family: "Pontano Sans", sans-serif;
+		font-size: .5em;
+		position: absolute;
+		z-index: 10;
+		top: 5em;
+		left: 6.95em;
+		text-align: center;
+	}
+}
+
+.Registries-page {
+	h1 {
+		left: 9.56em;
+		top: 0.3em;
+	}
+
+	.registries-list {
+		.text;
+		//position: absolute;
+		//z-index: 10;
+		font-family: "Pontano Sans", sans-serif;
+		font-size: 0.7em;
+		text-align: center;
+		top: 2.5em;
+		left: 13.4em;
+		list-style: none;
+
+		a {
+			color: #FFF;
+			text-decoration: none;
+
+			&:hover {
+				border-bottom: 0.05em dashed #FFF;
+			}
+		}
+	}
+
+	.gratitude {
+		.text;
+		font-family: "Pontano Sans", sans-serif;
+		font-weight: bold;
+		font-size: .5em;
+		top: 9em;
+		left: 21em;
+		width: 10em;
+		text-align: right;
+	}
+}
+
+.Photos-page {
+	h1 {
+		top: 0.4em;
+		left: 0.2em;
+	}
+
+	.instructions {
+		.text;
+		.text-shadow(0 0 15px #000);
+		font-family: "Pontano Sans", sans-serif;
+		font-size: 0.5em;
+		top: 2.7em;
+		left: 0.5em;
+	}
+
+	.photo-labels {
+		color: #999;
+		text-align: center;
+		table-layout: fixed;
+		background-color: #000;
+		opacity: .7;
+		z-index: 10;
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 0.3em;
+		height: 4%;
+
+		td {
+			width: percentage(1/17);
+		}
+	}
+
+	.slider-track {
+		position: absolute;
+		z-index: 11;
+		height: 4%;
+
+		.slider {
+			width: percentage(1/17);
+			height: 100%;
+			background-color: #FE2A3D;
+			opacity: 0.3;
+		}
+	}
+
+	.picture-frame {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-position: top;
+		z-index: 9;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html, body {
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+	overflow-x:hidden;
+}
+
+.skrollable {
+	/*
+	 * First-level skrollables are positioned relative to window
+	 */
+	position:fixed;
+
+	/*
+	 * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+	 */
+	z-index:100;
+
+}
+
+.skrollable.notransition, .notransition .skrollable {
+			transition: none;
+		 -o-transition: none;
+		-ms-transition: none;
+	   -moz-transition: none;
+	-webkit-transition: none;
+}
+
+.skrollable.hidden {
+	display:none !important;
+}
+
+.skrollable .skrollable {
+	/*
+	 * Second-level skrollables are positioned relative their parent skrollable
+	 */
+	position:absolute;
+}
+
+.skrollable .skrollable .skrollable {
+	/*
+	 * Third-level (and below) skrollables are positioned static
+	 */
+	position:static;
+}
+
+
+
+
+
+
+
