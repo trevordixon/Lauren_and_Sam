@@ -58,4 +58,19 @@ $(function() {
 			easeIn: function(r) { return 1-(1-r)*(1-r)*(1-r)*(1-r); }
 		}
 	});
+	
+	var y;
+	$(document).bind('touchmove', function(e) {
+		e.preventDefault();
+		var t = e.originalEvent.touches[0];
+		if (!y) return y = t.pageY;
+		var offset = t.pageY - y;
+		skroll.setScrollTop($('body').scrollTop() - offset);
+		y = t.pageY;
+	});
+	
+	$(document).bind('touchend', function(e) {
+		y = undefined;
+		e.preventDefault();
+	});
 });
