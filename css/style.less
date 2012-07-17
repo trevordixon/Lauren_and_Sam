@@ -759,6 +759,10 @@ html, body {
 	 * First-level skrollables are positioned relative to window
 	 */
 	position:fixed;
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+
 
 	/*
 	 * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
